@@ -7,10 +7,13 @@
     "node": ">=8"
   },
   "scripts": {
+    "build": "babel src -d build",
+    "build-clean": "rm -rf build",
+    "postbuild-clean": "npm run build",
     "test": "mocha",
     "test:module2": "mocha test/module2.test.js",
     "test:module3": "mocha test/module3.test.js",
-    "test:module4": "mocha test/module4.test.js"
+    "test:module4": "mocha test/module4.test.js" 
   },
   "repository": {
     "type": "git",
@@ -24,13 +27,13 @@
   },
   "homepage": "https://github.com/pmbanugo/node-automating-with-npm-scripts#readme",
   "dependencies": {
-    "fastify": "2.12.1"
+    "fastify": "^2.15.3"
   },
   "devDependencies": {
-    "@babel/cli": "7.8.4",
+    "@babel/cli": "^7.17.6",
     "@babel/core": "7.8.7",
     "@babel/preset-env": "7.8.7",
-    "mocha": "7.1.1",
+    "mocha": "^9.2.2",
     "nodemon": "2.0.2"
   }
 }
